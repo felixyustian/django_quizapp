@@ -1,0 +1,25 @@
+{% extends 'quiz_app/base.html' %}
+
+{% block content %}
+    <h2>Kuis Python & AI</h2>
+    <p><strong>Total Skor Anda: {{ user.score }}</strong></p>
+    <hr>
+    
+    <h3>{{ q.question }}</h3>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="correct_answer" value="{{ q.answer }}">
+        
+        {% for option in options %}
+            <div style="margin: 10px 0;">
+                <label>
+                    <input type="radio" name="answer" value="{{ option }}" required>
+                    {{ option }}
+                </label>
+            </div>
+        {% endfor %}
+        
+        <button type="submit">Jawab</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'quiz_app/base.html' %}
+
+{% block content %}
+    <h2>Papan Peringkat</h2>
+    <table>
+        <tr>
+            <th>Peringkat</th>
+            <th>Nama Pemain</th>
+            <th>Skor</th>
+        </tr>
+        {% for u in users %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ u.nickname|default:u.username }}</td>
+            <td>{{ u.score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

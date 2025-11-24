@@ -1,0 +1,32 @@
+{% extends 'quiz_app/base.html' %}
+
+{% block content %}
+    <h2>Selamat Datang di Kuis AI (Versi Django)!</h2>
+    <p>Cek cuaca kota Anda sebelum belajar.</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Masukkan nama kota (contoh: Jakarta)" required>
+        <button type="submit">Cek Cuaca</button>
+    </form>
+
+    {% if weather %}
+        <h3>Perkiraan Cuaca di {{ city }}</h3>
+        <table>
+            <tr>
+                <th>Hari/Tanggal</th>
+                <th>Suhu Siang (°C)</th>
+                <th>Suhu Malam (°C)</th>
+                <th>Kondisi</th>
+            </tr>
+            {% for day in weather %}
+            <tr>
+                <td>{{ day.day }}, {{ day.date }}</td>
+                <td>{{ day.temp_day }}</td>
+                <td>{{ day.temp_night }}</td>
+                <td>{{ day.desc }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}
