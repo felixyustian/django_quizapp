@@ -2,6 +2,8 @@
 
 A dynamic, web-based quiz application built with Django that leverages AI to generate interactive quizzes. This application allows users to test their knowledge on various topics with questions generated in real-time or pre-curated by administrators.
 
+# Live version of the quiz app: https://felixyustian.pythonanywhere.com/
+
 ## 🚀 Features
 
 * **AI-Powered Question Generation**: Automatically generate quiz questions and answers based on topics or uploaded content using AI (e.g., OpenAI/LLM integration).
