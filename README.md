@@ -16,9 +16,9 @@ A dynamic, web-based quiz application built with Django that leverages AI to gen
 ## 🛠️ Technology Stack
 
 * **Backend**: Django (Python)
-* **Database**: SQLite (default) / PostgreSQL (recommended for production)
+* **Database**: SQLite (default) / PostgreSQL
 * **AI Integration**: OpenAI API (or similar LLM provider)
-* **Frontend**: HTML5, CSS3, JavaScript, Bootstrap/Tailwind (assumed)
+* **Frontend**: HTML5, CSS3, JavaScript, Bootstrap/Tailwind
 
 ## 📋 Prerequisites
 
